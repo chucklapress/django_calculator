@@ -1,0 +1,30 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <link rel = "stylesheet" href ={% static "app/css/bootstrap.css"%}>
+
+</head>
+<body>
+     <h2>Calculator</h2>
+<br>
+    <form action= method="get">
+        {% csrf_token %}
+        {{ form }}
+        <input type="number"  =''>
+        <input type="number"  =''>
+        <input type="submit" value="Submit!">
+
+
+
+
+
+
+
+<br>
+
+</body>
+</html>
