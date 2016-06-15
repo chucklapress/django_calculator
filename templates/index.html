@@ -11,14 +11,21 @@
 <body>
      <h2>Calculator</h2>
 <br>
-    <form action= method="get">
+    <form action='' method="post">
         {% csrf_token %}
-        {{ form }}
-        <input type="number"  =''>
-        <input type="number"  =''>
+
+        <input type="number"  name='left'>
+        <select name="operators">
+            <option value="add">+</option>
+            <option value="subtract">-</option>
+            <option value="multiply">*</option>
+            <option value="divide">/</option>
+        </select>
+        <input type="number"  name='right'>
+
         <input type="submit" value="Submit!">
-
-
+    </form>
+{{ total }}
 
 
 
