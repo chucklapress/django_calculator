@@ -17,6 +17,7 @@ def index_view(request):
         if mathop == 'divide':
             value = int(left) / int(right)
 
+
         context ={
             'total':value
         }
