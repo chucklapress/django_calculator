@@ -3,35 +3,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Home</title>
-    <link rel = "stylesheet" href ={% static "app/css/bootstrap.css"%}>
-
+<meta charset="UTF-8">
+<title>Home</title>
+<link rel = "stylesheet" href ={% static "app/css/bootstrap.css"%}>
+<nav class="navbar navbar-default navbar-fixed-top"><div class="container">
+<ul class="nav nav-pills">
+<li role="presentation" class="active"><a href="{% url 'index_view' %}">Home</a></li>
+</nav>
+</div>
 </head>
 <body>
-     <h2>Calculator</h2>
+<div class="container">
 <br>
-    <form action='' method="post">
-        {% csrf_token %}
-
-        <input type="number"  name='left'>
-        <select name="operators">
-            <option value="add">+</option>
-            <option value="subtract">-</option>
-            <option value="multiply">*</option>
-            <option value="divide">/</option>
-        </select>
-        <input type="number"  name='right'>
-
-        <input type="submit" value="Submit!">
-    </form>
-                        {{ total }}
-
-
-
-
-
 <br>
-
+<br>
+<h2>Calculator</h2>
+<br>
+<br>
+<form action='' method="post">
+{% csrf_token %}
+<br>
+<input type="number"  name='left'>
+<br>
+<br>
+<select name="operators">
+<option value="add">+</option>
+<option value="subtract">-</option>
+<option value="multiply">*</option>
+<option value="divide">/</option>
+</select>
+<br>
+<br>
+<input type="number"  name='right'>
+<br>
+<br>
+<input type="submit" value="Submit!">
+</form>
+<h4>Your total:</h4>
+  {{ total }}
+<br>
+</div>
 </body>
 </html>
