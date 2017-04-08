@@ -25,7 +25,7 @@ SECRET_KEY = 'da19(vlgx5=kdqro=d_^21=3p&alb-lm&1quo#te$lu+wlafkv'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -121,4 +121,3 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 LOGIN_URL = '/'
-
